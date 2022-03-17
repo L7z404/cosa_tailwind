@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.Card{
-    @apply w-48 h-64 shadow-md rounded-lg
+.card {
+    @apply w-48 h-64 shadow-md rounded-lg shrink-0 snap-center
+}
+.card-details {
+    @apply w-full h-2/5 rounded-b-lg flex flex-col justify-center gap-2 p-4
+}
+
+.card:nth-child(even) {
+    @apply bg-white text-terciary
+}
+.card:nth-child(odd) {
+    @apply bg-secondary text-white
 }

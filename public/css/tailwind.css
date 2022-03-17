@@ -472,6 +472,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: absolute;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -488,12 +492,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
-.h-3\/5 {
-  height: 60%;
+.h-72 {
+  height: 18rem;
 }
 
-.h-2\/5 {
-  height: 40%;
+.h-3\/5 {
+  height: 60%;
 }
 
 .w-full {
@@ -502,6 +506,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-36 {
   width: 9rem;
+}
+
+.w-auto {
+  width: auto;
 }
 
 .flex-col {
@@ -518,6 +526,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(24rem * var(--tw-space-y-reverse));
 }
 
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overscroll-x-contain {
+  overscroll-behavior-x: contain;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -527,23 +549,45 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-top-right-radius: 0.5rem;
 }
 
-.rounded-b-lg {
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(143 162 6 / var(--tw-bg-opacity));
-}
-
 .bg-norway {
   background-image: url('../img/norway.jpg');
+}
+
+.bg-new_york {
+  background-image: url('../img/new_york.jpg');
+}
+
+.bg-yosemite {
+  background-image: url('../img/yosemite.jpg');
+}
+
+.bg-LA {
+  background-image: url('../img/LA.jpg');
+}
+
+.bg-sydney {
+  background-image: url('../img/sydney.jpg');
+}
+
+.bg-bali {
+  background-image: ../img/bali.jpg');
+}
+
+.bg-switzerland {
+  background-image: url('../img/switzerland.jpg');
+}
+
+.bg-europe {
+  background-image: url('../img/europe.jpg');
+}
+
+.bg-iceland {
+  background-image: url('../img/iceland.jpg');
 }
 
 .bg-cover {
@@ -558,8 +602,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
-.p-20 {
-  padding: 5rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-4 {
@@ -580,6 +624,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-base {
@@ -605,6 +654,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-terciary {
+  --tw-text-opacity: 1;
+  color: rgb(97 174 201 / var(--tw-text-opacity));
+}
+
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -616,11 +670,39 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
-.Card {
+.card {
   height: 16rem;
   width: 12rem;
+  flex-shrink: 0;
+  scroll-snap-align: center;
   border-radius: 0.5rem;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.card-details {
+  display: flex;
+  height: 40%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.card:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(97 174 201 / var(--tw-text-opacity));
+}
+
+.card:nth-child(odd) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(143 162 6 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
