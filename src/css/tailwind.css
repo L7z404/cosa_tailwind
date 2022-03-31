@@ -10,10 +10,10 @@
 }
 
 .card:nth-child(even) {
-    @apply bg-white text-terciary
+    @apply bg-white text-terciary dark:bg-gray-800 dark:text-gray-300;
 }
 .card:nth-child(odd) {
-    @apply bg-secondary text-white
+    @apply bg-secondary text-white dark:bg-gray-700;
 }
 
 .cardTitle{
